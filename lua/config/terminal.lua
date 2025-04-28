@@ -1,4 +1,9 @@
 vim.opt.termguicolors = true -- better colors in terminal
+
+
+local shell = vim.loop.os_uname().sysname == "Windows_NT" and "pwsh" or "zsh"
+
+
 require("toggleterm").setup{
   -- size can be a number or function which is passed the current terminal
   size = function(term)
@@ -19,8 +24,9 @@ require("toggleterm").setup{
   direction = 'vertical',
   -- direction = 'vertical' | 'horizontal' | 'window' | 'float',
   close_on_exit = true, -- close the terminal window when the process exits
-  -- shell = vim.o.shell, -- change the default shell
-  shell = 'zsh',
+  --shell = vim.o.shell, -- change the default shell
+  shell = shell, -- change the default shell
+  -- shell = 'zsh',
   -- This field is only relevant if direction is set to 'float'
   float_opts = {
     -- The border key is *almost* the same as 'nvim_open_win'
