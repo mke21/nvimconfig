@@ -5,18 +5,18 @@ return {
 		event = 'BufRead',
 		config = function()
 			require("nvim-treesitter.configs").setup({
-				ensure_installed = { 
-					"lua", 
-					"go", 
-					"python", 
-					"javascript", 
-					"typescript", 
-					"html", 
-					"css", 
-					"json", 
-					"yaml", 
-					"markdown", 
-					"markdown_inline" 
+				ensure_installed = {
+					"lua",
+					"go",
+					"python",
+					"javascript",
+					"typescript",
+					"html",
+					"css",
+					"json",
+					"yaml",
+					"markdown",
+					"markdown_inline"
 				},
 				auto_install = false,
 				highlight = {
