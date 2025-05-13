@@ -39,8 +39,8 @@ nkeymap('<leader>sp', ':setlocal spell!<CR>')
 
 -- copilot aanvullen
 keymap('i', '<m-c>', 'copilot#Accept("<CR>")', {expr = true, silent = true})
+keymap('i', '<m-e>', 'copilot#Dismiss()', {expr = true, silent = true})
 
--- telescope
 -- fuzzyfinding
 nkeymap('<leader>ff', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
 nkeymap('<leader>rr', '<cmd>Telescope lsp_references<cr>')
